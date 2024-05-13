@@ -1,0 +1,47 @@
+#Calculator
+def display():
+    print("1.ADD\n2.SUBTRACT\n3.MULTIPLY\n4.DIVIDE\n")
+
+#function for addition    
+def add(n1,n2):
+    print(n1+n2)
+
+#function  for subtraction
+def subtract(n1,n2):
+    print(n1-n2)
+    
+#function for multiplication
+def multiply(n1,n2):
+    print(n1*n2)
+ 
+#function for division
+def divide(n1,n2):
+    if n2==0:
+        print("INVALID!!!")
+    else:
+        print(n1/n2)
+
+#main function        
+def main():
+    while True:
+        display()
+        ch=int(input("Enter your choice: "))
+        n1=int(input("Enter the first number: "))
+        n2=int(input("Enter the second number: "))
+        if ch==1:
+            add(n1,n2)
+        elif ch==2:
+            subtract(n1,n2)
+        elif ch==3:
+            multiply(n1,n2)
+        elif ch==4:
+            divide(n1, n2)
+        c=input("Do you want to continue(y/n): ")
+        if c=='n':
+            print("Thankyou for using my calculator\N{grinning face}!!")
+            break
+
+#function call will start from here        
+if __name__=="__main__":
+    main()
+    
